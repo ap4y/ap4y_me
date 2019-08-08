@@ -1,0 +1,32 @@
+{
+  "name": "ap4y_me",
+  "browserslist": [
+    "> 5%",
+    "last 2 versions"
+  ],
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --watch --colors --config webpack.conf.js",
+    "lint": "eslint --ext .js src",
+    "build": "NODE_ENV=production webpack --config webpack.conf.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.6.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^3.1.0",
+    "eslint-import-resolver-webpack": "^0.10.0",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.2",
+    "webpack-manifest-plugin": "^2.0.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

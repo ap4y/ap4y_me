@@ -1,0 +1,37 @@
+<div class="left-block">
+  {{ range .Resources.ByType "image" }}
+  {{ $thumb := .Resize "600x" }}
+  <a href="{{ .RelPermalink }}"><img src="{{ $thumb.RelPermalink }}" /></a>
+  {{ end }}
+</div>
+
+<div class="right-block">
+  <h1 class="title">
+    <span>{{ .Title }}</span>
+    <small class="date">{{  dateFormat "January 2006" .Date }}</small>
+  </h1>
+
+  {{ .Content }}
+
+  <div class="tag-list">
+    {{ range .Params.tags }}
+    <span>{{ . }}</span>
+    {{ end }}
+  </div>
+
+  {{ if .Params.testimonials }}
+  <h3>Feedback</h3>
+  <blockquote>
+    <p>{{ .Params.testimonials }}</p>
+    <p><strong>{{ .Params.testimonials_by }}</strong></p>
+  </blockquote>
+  {{ end }}
+</div>
+
+<div class="right-block projects-nav">
+  {{if .PrevInSection}}
+  <div class="nav-link">
+    <a class="arrow-link right" href="{{ .PrevInSection.RelPermalink }}">Next Project</a>
+  </div>
+  {{ end }}
+</div>

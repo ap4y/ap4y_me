@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="grid">
+  <div class="center-block blogs">
+    {{ range first 10 .Pages }}
+    <div>
+      <h2>{{ .Title }}</h2>
+      <small class="date">{{ dateFormat "01 Jan 2006" .Date }}</small>
+      <p>{{ .Summary }}</p>
+      <p>
+        <a class="arrow-link right" href="{{ .RelPermalink }}">Read more</a>
+      </p>
+    </div>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

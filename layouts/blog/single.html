@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="grid">
+  <div class="center-block blogs">
+    <h1>{{ .Title }}</h1>
+    <date class="date">{{ .PublishDate.Format "January 2, 2006" }}</date>
+
+    {{ .Content }}
+
+    <p>
+      <a class="arrow-link left" href="/blog">Back</a>
+    </p>
+  </div>
+</main>
+{{ end }}

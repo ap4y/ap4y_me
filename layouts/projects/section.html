@@ -1,0 +1,7 @@
+{{ define "main" }}
+<main class="grid projects">
+  {{ range first 1 .Pages }}
+  {{ partial "project.html" . }}
+  {{ end }}
+</main>
+{{ end }}

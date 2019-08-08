@@ -1,0 +1,46 @@
+{{ define "main" }}
+<main class="grid">
+  <div class="center-block">
+    <h2>Recent Projects</h2>
+  </div>
+
+  <div class="fullwidth-block grid projects-carousel">
+    {{ range (where (where .Site.RegularPages "Type" "eq" "projects") ".Params.featured" "eq" true) }}
+    {{ $page := . }}
+    {{ range first 1 (.Resources.ByType "image") }}
+    {{ $thumb := .Resize "600x" }}
+    <a href="{{ $page.RelPermalink }}">
+      <figure>
+        <img src="{{ $thumb.RelPermalink }}" />
+        <figcaption>
+          <h4>{{ $page.Title }}</h4>
+        </figcaption>
+      </figure>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="center-block blog-list">
+    <h2>Blog Posts</h2>
+
+    {{ range first 2 (where .Site.RegularPages "Type" "eq" "blog") }}
+    <div>
+      <h4>{{ .Title }}</h4>
+      <p>{{ .Summary }}</p>
+      <a class="arrow-link right" href="{{ .RelPermalink }}">Read more</a>
+    </div>
+    {{ end }}
+  </div>
+
+  <div id="feedback-list" class="center-block feedback-list">
+    <h2>Feedback</h2>
+    {{ range (where (where .Site.RegularPages "Type" "eq" "projects") ".Params.testimonials" "ne" nil) }}
+    <blockquote>
+      <p>{{ .Params.testimonials }}</p>
+      <p><strong>{{ .Params.testimonials_by }}</strong></p>
+    </blockquote>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
