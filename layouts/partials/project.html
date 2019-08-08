@@ -13,11 +13,11 @@
 
   {{ .Content }}
 
-  <div class="tag-list">
+  <p class="tag-list">
     {{ range .Params.tags }}
     <span>{{ . }}</span>
     {{ end }}
-  </div>
+  </p>
 
   {{ if .Params.testimonials }}
   <h3>Feedback</h3>

@@ -27,6 +27,20 @@
 
     a {
       height: 15rem;
+      grid-column: auto / span 4;
+    }
+  }
+
+  .projects {
+    .title {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+
+      span {
+        margin-bottom: unset;
+        margin-right: 1rem;
+      }
     }
   }
 }

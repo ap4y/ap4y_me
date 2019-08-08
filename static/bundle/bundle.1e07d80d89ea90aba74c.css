@@ -511,7 +511,7 @@ pre {
     font-size: 14px; }
 
 .highlight pre {
-  max-width: 600px;
+  max-width: 90vw;
   overflow-x: auto; }
 
 figure {
@@ -645,17 +645,15 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .projects .title span {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    margin-right: 1rem; }
+    margin-bottom: 1.25rem; }
   .projects .title .date {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
@@ -715,7 +713,7 @@ header {
   max-height: 7.5rem;
   overflow: hidden; }
   .projects-carousel a {
-    grid-column: auto / span 4;
+    grid-column: auto / span 6;
     height: 7rem;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -787,7 +785,22 @@ header {
   .projects-carousel {
     max-height: 15.5rem; }
     .projects-carousel a {
-      height: 15rem; } }
+      height: 15rem;
+      grid-column: auto / span 4; }
+  .projects .title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
+    .projects .title span {
+      margin-bottom: unset;
+      margin-right: 1rem; } }
 
 /* Desktop */
 @media (min-width: 1280px) {
