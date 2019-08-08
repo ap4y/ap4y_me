@@ -3,6 +3,7 @@ import "normalize.css";
 import "../css/fonts.scss";
 import "../css/base.scss";
 import "../css/layout.scss";
+import "../css/responsive.scss";
 
 const el = document.getElementById("feedback-list");
 if (el) {
