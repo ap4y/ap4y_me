@@ -210,12 +210,12 @@ header {
 
 .projects-carousel {
   padding: 0 1rem;
-  max-height: 7.5rem;
+  max-height: 31.5rem;
   overflow: hidden;
 
   a {
-    grid-column: auto / span 6;
-    height: 7rem;
+    grid-column: auto / span 12;
+    height: 15rem;
     margin-bottom: 1rem;
 
     overflow: hidden;
