@@ -1,5 +1,5 @@
 baseURL = "http://ap4y.me/"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 languageCode = "en-us"
 title = "~/home/ap4y"
 pygmentsStyle = "github"
