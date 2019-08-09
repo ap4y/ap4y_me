@@ -63,12 +63,12 @@
 
   header {
     .center-block {
-      grid-column: col-start 5 / span 4;
+      grid-column: col-start 4 / span 6;
     }
   }
 
   .center-block {
-    grid-column: col-start 5 / span 4;
+    grid-column: col-start 4 / span 6;
   }
 
   .left-block {
@@ -81,14 +81,27 @@
 
   .right-block {
     grid-column: col-start 7 / span 4;
-
-    h1 {
-      margin-top: 2.75rem;
-    }
   }
 
   .projects-carousel a {
     grid-column: auto / span 3;
+  }
+
+  .code h1 {
+    margin-top: 2.75rem;
+  }
+}
+
+/* Wide */
+@media (min-width: 1600px) {
+  header {
+    .center-block {
+      grid-column: col-start 5 / span 4;
+    }
+  }
+
+  .center-block {
+    grid-column: col-start 5 / span 4;
   }
 }
 
