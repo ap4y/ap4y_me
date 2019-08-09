@@ -192,22 +192,6 @@ header {
   }
 }
 
-.projects-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-
-  button {
-    appearance: none;
-    background: none;
-    outline: none;
-    border: 1px solid var(--text-color);
-
-    font-weight: normal;
-    font-size: 1.44em;
-  }
-}
-
 .projects-carousel {
   padding: 0 1rem;
   max-height: 31.5rem;
@@ -217,9 +201,9 @@ header {
     grid-column: auto / span 12;
     height: 15rem;
     margin-bottom: 1rem;
-
     overflow: hidden;
     position: relative;
+
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -236,6 +220,7 @@ header {
       position: absolute;
       bottom: 0;
       left: 1rem;
+      right: 1rem;
       z-index: 2;
       opacity: 0;
       transition: opacity 0.4s;
