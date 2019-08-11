@@ -38,7 +38,11 @@
     {{ range (where (where .Site.RegularPages "Type" "eq" "projects") ".Params.testimonials" "ne" nil) }}
     <blockquote>
       <p>{{ .Params.testimonials }}</p>
-      <p><strong>{{ .Params.testimonials_by }}</strong></p>
+      <p>
+        <a href="{{ .RelPermalink }}">
+          <strong>{{ .Params.testimonials_by }}</strong>
+        </a>
+      </p>
     </blockquote>
     {{ end }}
   </div>
