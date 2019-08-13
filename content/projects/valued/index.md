@@ -8,7 +8,7 @@ testimonials_by = "Sabrina, Valued, USA"
 featured = true
 +++
 
-Web application that connects job seekers with employees based on the lifestyle values. This app provides variety of tools and dashboard for jobs seekers and companies. 
+Web application that connects job seekers with employees based on the lifestyle values. This app provides variety of tools and dashboards for jobs seekers and companies. 
 
 Tools I used:
 

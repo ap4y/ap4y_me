@@ -8,4 +8,4 @@ testimonials_by = "Sam, Spinifex, New Zealand"
 featured = true
 +++
 
-Web page for a Māori winemakers collective. Project has a complex layout with significant transformations via media queries, range of different animations and a bit of javascript code. I have used webpack as a build system and this allowed me to use modern frontend technologies: es6 via Babel and css-next with autoprefixer via postcss.
+Web page for a Māori winemakers collective. Project has complex layout with significant transformations via media queries, range of different animations and a bit of javascript code. I have used webpack as a build system and this allowed me to use modern frontend technologies: es6 via Babel and css-next with autoprefixer via postcss.

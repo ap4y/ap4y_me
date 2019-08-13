@@ -8,7 +8,7 @@ I have been using ruby in commercial projects for 7 years, comfortable with the 
 
 I'm fluent with modern javascript and frontend frameworks (prefer react), css and webpack. I'm comfortable using d3.js and have done a lot of work around analytics dashboards. 
 
-I also have done quite a bit of iOS development and comfortable using both swift and objective-c and react native (preferred). I have experience implementing highly customised UI and animations, web API communication and local data persistence. 
+I also have done quite a bit of iOS development and comfortable using both swift, objective-c and react native (preferred). I have experience implementing highly customised UI and animations, web API communication and local data persistence. 
 
 My main OS is Gentoo Linux and I have a lot of experience managing linux deployments across various hosting platforms.
 

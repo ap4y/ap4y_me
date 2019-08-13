@@ -10,7 +10,7 @@ featured = true
 
 Web application for a proxy services provider. I was involved in tasks across the platform trying to scale product up. Some of the things I worked on:
 
-- Implementation of the HTTP and SOCKS5 proxies and auxiliary services (billing and log collectors, credential managers and health monitoring). May main focus was on improving reliability and visibility of the proxy deployments. All these services were written in golang.
+- Implementation of the HTTP and SOCKS5 proxies and auxiliary services (billing and log collectors, credential managers and health monitoring). My main focus was on improving reliability and visibility of the proxy deployments. All these services were written in golang.
 
 - Ruby dashboard application. I performed upgrade from rails 3 to rails 5, implemented and released re-designed version, replaced old jquery code with vue.js components.
 
