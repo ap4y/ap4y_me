@@ -34,4 +34,4 @@ url = "/about/"
 weight = 4
 
 [permalinks]
-blog = "/:year/:month/:day/:title/"
+blog = "/:year/:month/:day/:filename/"

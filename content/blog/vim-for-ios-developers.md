@@ -1,6 +1,6 @@
 +++
 title = "Vim for iOS developers"
-date = 2013-11-23
+date = 2013-11-11
 +++
 
 > Vim is a really popular editor for scripting languages, but it can be hard to integrate it with compiled languages like Objective-C. In this article I will describe my Vim workflow for iOS development. 

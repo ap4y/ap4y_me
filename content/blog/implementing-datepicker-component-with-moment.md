@@ -1,6 +1,6 @@
 +++
 title = "Implementing date picker component with Moment.js"
-date = 2014-04-26
+date = 2014-05-26
 +++
 
 > There are numerous examples of the date pickers in the internet, but you can find that some of them are really hard to use with Ember.js. Hopefully, it's not hard to roll your own date picker in form of component with proper bindings just using the Moment.js library. 
