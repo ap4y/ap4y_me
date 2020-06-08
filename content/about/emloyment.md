@@ -2,9 +2,18 @@
 type = "employment-history"
 +++
 
+#### Full Stack Engineer | GitLab
+
+<date>October 2019</date>
+
+I'm currently working at GitLab on security related products for
+Kubernetes deployments. My team's primary focus is providing network
+and host security through GitLab pipelines and Kubernetes
+integrations.
+
 #### Remote Full Stack Developer | Self-employed
 
-<date>November 2015</date>
+<date>November 2015 - October 2019</date>
 
 I have been contracting for several years since I moved to a smaller town. I have experience working as a member of a development team and as an independent developer. You can find projects that I worked on in my [portfolio](/projects/).
 
