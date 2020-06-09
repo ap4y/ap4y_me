@@ -1,5 +1,5 @@
 +++
-title = "Gentoo ZFS encrypted root with EFI stub"
+title = "Gentoo on ZFS encrypted root with EFI stub"
 date = 2020-06-08
 +++
 
