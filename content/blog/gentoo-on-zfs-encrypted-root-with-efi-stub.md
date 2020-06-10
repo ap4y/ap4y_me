@@ -103,7 +103,7 @@ default.
 You can verify that encryption is applied to a dataset by doing:
 
 ```sh
-zfs get encryption,keyformat,keylocation rpool/ROOT/gentoo
+$ zfs get encryption,keyformat,keylocation rpool/ROOT/gentoo
 NAME               PROPERTY     VALUE
 rpool/ROOT/gentoo  encryption   aes-256-gcm
 rpool/ROOT/gentoo  keyformat    passphrase
