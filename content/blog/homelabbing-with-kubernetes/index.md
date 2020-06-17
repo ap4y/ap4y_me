@@ -83,7 +83,7 @@ so I'm not going to cover that. Once you have `cert-manager` running
 you can request certificates by creating the `Issuer` and
 `Certificate` resources, for example:
 
-```yaml
+{{< highlight yaml >}}
 apiVersion: cert-manager.io/v1alpha2
 kind: Issuer
 metadata:
@@ -112,22 +112,22 @@ spec:
   - ap4y.me
   - foo.ap4y.me
   - bar.ap4y.me
-```
+{{< /highlight >}}
 
 You can check the progress by running:
 
-```sh
+{{< highlight sh >}}
 $ kubectl get certificate
 NAME                  READY   SECRET                AGE
 ap4y-me-certificate   True    ap4y-me-certificate   9d
-```
+{{< /highlight >}}
 
 Certificate will be managed by `cert-manager` and is stored in a
 `Secret` resource under `ap4y-me-certificate` name. You can map this
 certificate directly to a `Pod` or make ingress controller do TLS
 termination for your `http` services:
 
-```yaml
+{{< highlight yaml >}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -148,7 +148,7 @@ spec:
         backend:
           serviceName: website
           servicePort: 80
-```
+{{< /highlight >}}
 
 `cert-manager` was a huge time saver for me, I don't have to worry
 about fixing certificate permissions and restarting services once
@@ -175,7 +175,7 @@ if you have two interfaces on your server `192.168.1.10` and
 allow you to expose services in desired networks on desired ports, you
 can also pick a desired IP from the range:
 
-```yaml
+{{< highlight yaml >}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -192,7 +192,7 @@ spec:
     app: smtpd
   type: LoadBalancer
   loadBalancerIP: 192.168.1.250
-```
+{{< /highlight >}}
 
 With `metallb.universe.tf/allow-shared-ip: ap4y.home` annotation you
 can use the same IP address in multiple services with the same sharing
@@ -216,7 +216,7 @@ deployment.
 
 First we crate necessary configs for `opensmtpd`:
 
-```yaml
+{{< highlight yaml >}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -243,7 +243,7 @@ data:
     action "outbound" relay helo mx.ap4y.me
     action "dkim" relay host smtp://127.0.0.1:10027
     ...
-```
+{{< /highlight >}}
 
 Few things to note about the above `ConfigMap`:
 
@@ -264,7 +264,7 @@ Few things to note about the above `ConfigMap`:
 I will omit configs for the `dkimproxy` for simplicity. We can now
 create a `Deployment` resource of 1 replica:
 
-```yaml
+{{< highlight yaml >}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -309,7 +309,7 @@ spec:
       - name: domainkey
         secret:
           secretName: ap4y-me-dkim
-```
+{{< /highlight >}}
 
 This `Deployment` will start `smtpd` and `dkimproxy` sidecar with
 necessary mounts, `dovecot` service will be eventually available on

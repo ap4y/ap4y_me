@@ -62,18 +62,18 @@ our key data. As of now maximum supported key size is 512 bytes, so a
 single 1 sector partition should suffice. We have to offset partition
 by 2048 bytes which are reserved for GPT's partition table.
 
-```sh
+{{< highlight sh >}}
 $ parted -s /dev/sdX mklabel gpt mkpart key 2048s 2048s
-```
+{{< /highlight >}}
 
 Next we will write `raw` key to this partition, we have to make sure
 to exclude newline symbols to prevent undesirable key truncation as
 described in this
 [comment](https://github.com/openzfs/zfs/issues/6556#issuecomment-570340855).
 
-```sh
+{{< highlight sh >}}
 $ tr -d '\n' < /dev/urandom | dd of=/dev/disk/by-partlabel/key
-```
+{{< /highlight >}}
 
 This will be enough for ZFS to create and unlock encrypted datasets
 using this removable drive.
@@ -83,12 +83,12 @@ using this removable drive.
 Process for setting up ZFS encrypted datasets is not much different
 from the usual routine, we just have to provide 3 additional options:
 
-```sh
+{{< highlight sh >}}
 $ zfs create -o encryption=on \
              -o keyformat=passphrase \
              -o keylocation=file:///dev/disk/by-id/usb-FK310-_128M_Mobile-Disk-part1 \
              rpool/ROOT/gentoo
-```
+{{< /highlight >}}
 
 This command will enable `aes-256-gcm` encryption for the provided
 dataset with the `passphare` key format and a key which is addressed
@@ -102,13 +102,13 @@ default.
 
 You can verify that encryption is applied to a dataset by doing:
 
-```sh
+{{< highlight sh >}}
 $ zfs get encryption,keyformat,keylocation rpool/ROOT/gentoo
 NAME               PROPERTY     VALUE
 rpool/ROOT/gentoo  encryption   aes-256-gcm
 rpool/ROOT/gentoo  keyformat    passphrase
 rpool/ROOT/gentoo  keylocation  file:///dev/disk/by-id/usb-FK310-_128M_Mobile-Disk-part1
-```
+{{< /highlight >}}
 
 At this stage you can move your existing Gentoo installation to this
 encrypted dataset. The next step is to make this `root` mount visible
@@ -133,9 +133,9 @@ settings.
 Each time you upgrade and recompile your kernel you will also need to
 create a new `initramfs` image using the following command:
 
-```sh
+{{< highlight sh >}}
 $ dracut -H --kver X.Y.Z-gentoo
-```
+{{< /highlight >}}
 
 `-H` arguments stands for `hostonly`, i.e. create an image
 specifically for the local machine instead of generic. You should see
@@ -145,13 +145,13 @@ enable ZFS on boot.
 The next step is to copy `initramfs` and EFI stub images to the
 `/boot` mount and create EFI record for it:
 
-```sh
+{{< highlight sh >}}
 $ mv /boot/initramfs-X.Y.Z-gentoo.img /boot/efi/gentoo/initramfs-X.Y.Z.img
 $ cp /usr/src/linux/arch/x86/boot/bzImage /boot/efi/gentoo/bzImage-X.Y.Z.efi
 $ efibootmgr -c -d /dev/sdX -L "Gentoo X.Y.Z" \
              -l '\EFI\Gentoo\bzImage-X.Y.Z.efi' \
              -u 'initrd=\efi\gentoo\initramfs-X.Y.Z.img dozfs root=ZFS=rpool/ROOT/gentoo'
-```
+{{< /highlight >}}
 
 The above command will create a new EFI record with label `Gentoo
 X.Y.Z` for the EFI stub image we generated, we will also pass
