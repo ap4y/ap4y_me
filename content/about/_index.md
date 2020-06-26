@@ -2,7 +2,7 @@
 title = "About me"
 +++
 
-Full stack web developer from [Chistchurch, New Zealand](https://www.openstreetmap.org/relation/2730349). I worked on a range of [projects](/projects/): from small media web applications to large-scale web APIs. Have a deep understanding of modern web technologies and backend programming. 
+Full stack web developer from New Zealand. I worked on a range of [projects](/projects/): from small media web applications to large-scale web APIs. Have a deep understanding of modern web technologies and backend programming. 
 
 I have been using ruby in commercial projects for 7 years, comfortable with the standard library and have experience working with various gems. Have strong knowledge of golang and it's standard library, have experience implementing various types of applications: command line tools, tcp/socket servers, web APIs and SPAs, small IoT services for ARM devices.
 
