@@ -10,8 +10,8 @@ code along with my contributions to other projects can be found in my
 Some of the contributions I made:
 
 - Implemented a [policy
-  audit](https://github.com/cilium/cilium/pull/9970) mode for Cilium,
-  helped with setting up [helm
+  audit](https://cilium.io/blog/2020/06/22/cilium-18/#policy-audit-mode)
+  mode for Cilium, helped with setting up [helm
   repository](https://cilium.io/blog/2020/02/18/cilium-17#helm-3-and-helm-repository)
   and made other various [smaller
   changes](https://github.com/cilium/cilium/pulls?q=is%3Apr+author%3Aap4y+is%3Aclosed).
@@ -33,3 +33,8 @@ I occasionally do [Leetcode](https://leetcode.com/ap4y/) code puzzles. You
 can check my submissions in [this repository](https://github.com/ap4y/leetcode).
 
 Source code for this website can also be found on [github](https://github.com/ap4y/ap4y_me).
+
+This website is hosted at my
+[homelab](/2020/06/10/homelabbing-with-kubernetes/) on a tiny
+kubernetes cluster. You can check kubernetes config on
+[github](https://github.com/ap4y/infra).
