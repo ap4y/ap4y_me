@@ -8,4 +8,5 @@ I primarily focus on these areas:
 - Golang for command line tools, performance critical components and as a backend for single page javascript applications
 - Javascript with react for single page applications
 - Serverless frontend applications
-- Complementary mobile development for web services I implemented
+- Container based deployments
+- Occasional mobile development
