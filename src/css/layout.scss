@@ -170,20 +170,23 @@ header {
 }
 
 .code {
-  padding-top: 2.75rem;
+  .right-block {
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  h3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.25rem;
+      a {
+        font-weight: normal;
+      }
+    }
 
-    a {
-      font-weight: normal;
+    .tag-list {
+      margin-bottom: 0;
     }
   }
 
-  img {
+  .left-block img {
     width: 100%;
     max-height: 300px;
     object-fit: contain;
