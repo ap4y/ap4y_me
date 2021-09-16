@@ -1,4 +1,4 @@
-FROM jojomi/hugo:0.74 as builder
+FROM jojomi/hugo:0.85.0 as builder
 
 COPY . /blog
 WORKDIR /blog
